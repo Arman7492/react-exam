@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../redux/productsSlice';
 import '../styles/Products.css';
 
-const ProductForm = ({ onAdd }) => {
+const ProductForm = () => {
   const [newProductName, setNewProductName] = useState('');
+  const dispatch = useDispatch();
 
   const handleAddProduct = () => {
     if (newProductName.trim()) {
@@ -11,7 +14,7 @@ const ProductForm = ({ onAdd }) => {
         name: newProductName,
         image: '/assets/default.png',
       };
-      onAdd(newProduct);
+      dispatch(addProduct(newProduct));
       setNewProductName('');
     }
   };
