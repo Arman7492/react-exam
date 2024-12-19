@@ -1,0 +1,20 @@
+.product-details {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  .product-details h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  .product-details p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
